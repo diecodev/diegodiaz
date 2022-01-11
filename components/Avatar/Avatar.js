@@ -7,13 +7,7 @@ const Avatar = () => {
     <>
       <div className={style.avatarCtn}>
         <div className={style.avatar}>
-          <Image
-            src={source}
-            layout="fill"
-            objectFit="cover"
-            placeholder="blur"
-            alt="Diego Díaz avatar"
-          />
+          <Image src={source} placeholder="blur" alt="Diego Díaz avatar" />
         </div>
         <span className={style.avatarInf}>
           <h3>
