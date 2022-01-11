@@ -1,5 +1,6 @@
 import About from "components/About/About";
 import Header from "components/header/Header";
+import Skills from "components/Skills/Skills";
 import Head from "next/head";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <div>
         <Header />
         <About />
+        <Skills />
       </div>
     </div>
   );

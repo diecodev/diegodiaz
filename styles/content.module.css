@@ -1,20 +1,66 @@
-/* ------- About ----------- */
-.section {
-  margin: 0 var(--margin_default);
-  border-bottom: 1px solid var(--bg_primary);
-}
-
-.section > div {
+/* GLOBALS */
+.section > div,
+.skillsCtn > ul {
   margin: calc(2 * var(--margin_default)) 0;
 }
 
-.section > div > h3 {
+.section > div > h3,
+.skillsCtn > ul > h3 {
   margin: 0 0 var(--margin_default);
   text-align: center;
   font-weight: 600;
+  font-size: var(--font_medium);
+}
+/* ------- About ----------- */
+.section {
+  border-bottom: 1px solid var(--bg_primary);
+  margin: 0 var(--margin_default);
 }
 
 .section > div > p {
   text-align: justify;
   line-height: var(--margin_default);
+}
+
+/* -------- Skills ------ */
+.skillsCtn {
+  display: grid;
+  place-items: center;
+  padding: 0 var(--margin_default);
+  background: linear-gradient(
+    0deg,
+    rgba(243, 243, 243, 1) 0%,
+    rgba(243, 243, 243, 0) 100%
+  );
+}
+.skillsCtn > ul {
+  list-style: none;
+  padding: 0;
+  width: 90%;
+}
+
+.skill {
+  background-color: var(--bg_secondary);
+  padding: calc(var(--margin_default) / 2);
+  box-shadow: 0 4px 5px var(--black_shadow);
+}
+
+.skill:not(:last-child) {
+  margin-bottom: var(--margin_default);
+}
+
+.skill:nth-child(odd) {
+  border-radius: 0 10px 10px;
+}
+
+.skill:nth-child(even) {
+  border-radius: 10px 0 10px 10px;
+}
+
+.skill > h3 {
+  margin-top: 0;
+}
+
+.skill > p {
+  margin-bottom: 0;
 }
