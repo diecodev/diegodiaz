@@ -54,10 +54,10 @@
 /* btn menu */
 .rotateContainer {
   position: fixed;
-  top: 1rem;
+  top: 0.5rem;
   right: 1rem;
   z-index: 2;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 50%;
   display: grid;
   place-content: center;
@@ -114,4 +114,49 @@
 .reveal > ul > li {
   transform: translateX(0);
   pointer-events: inherit;
+}
+
+/* AVATAR */
+.avatarCtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avatar {
+  width: calc(6 * var(--margin_default));
+  height: calc(6 * var(--margin_default));
+  background-color: var(--white);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid var(--white);
+}
+
+.avatarInf {
+  display: inline-block;
+  text-align: center;
+  color: var(--white);
+  margin: calc(var(--margin_default) / 2) 0 var(--margin_default);
+}
+
+.avatarInf > h3,
+.avatarInf > h4 {
+  font-weight: 300;
+  margin: 0;
+  line-height: var(--margin_default);
+}
+
+/* WAVE */
+.waveCtn,
+.waveCtn > svg {
+  width: 100%;
+}
+
+.socialmedia {
+  display: flex;
+  gap: var(--margin_default);
+  align-self: center;
+  justify-content: center;
 }
