@@ -7,9 +7,11 @@ const Navbar = () => {
     <header className={style.header}>
       <div className={style.container}>
         <Link href="/">
-          <h2 className={style.logo}>
-            Diego<span className={style.logospan}>.dev</span>
-          </h2>
+          <a>
+            <h2 className={style.logo}>
+              Diego<span className={style.logospan}>.dev</span>
+            </h2>
+          </a>
         </Link>
         <div>
           <Menu />
