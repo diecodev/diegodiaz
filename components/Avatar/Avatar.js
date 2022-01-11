@@ -17,9 +17,9 @@ const Avatar = () => {
         </div>
         <span className={style.avatarInf}>
           <h3>
-            Hi, I'm <b>Diego</b> and
+            Hi, I&apos;m <b>Diego</b> and
           </h3>
-          <h4>I'm a Frontend Developer</h4>
+          <h4>I&apos;m a Frontend Developer</h4>
         </span>
       </div>
     </>
