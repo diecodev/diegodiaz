@@ -1,0 +1,20 @@
+/* ------- About ----------- */
+.section {
+  margin: 0 var(--margin_default);
+  border-bottom: 1px solid var(--bg_primary);
+}
+
+.section > div {
+  margin: calc(2 * var(--margin_default)) 0;
+}
+
+.section > div > h3 {
+  margin: 0 0 var(--margin_default);
+  text-align: center;
+  font-weight: 600;
+}
+
+.section > div > p {
+  text-align: justify;
+  line-height: var(--margin_default);
+}
