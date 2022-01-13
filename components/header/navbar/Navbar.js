@@ -13,9 +13,7 @@ const Navbar = () => {
             </h2>
           </a>
         </Link>
-        <div>
-          <Menu />
-        </div>
+        <Menu />
       </div>
     </header>
   );

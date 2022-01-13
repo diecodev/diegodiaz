@@ -15,14 +15,11 @@
 
 .headerContainer,
 .menuContent,
-.rotateContainer {
+.rotateContainer,
+.header {
   background-color: var(--bg_primary);
 }
 /* ------------------------------------------ */
-
-.headerContainer {
-  min-height: 35vh;
-}
 
 .header,
 .container {

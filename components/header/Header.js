@@ -6,8 +6,8 @@ import Socialmedia from "./Socialmedia/Socialmedia";
 const Header = () => {
   return (
     <>
+      <Navbar />
       <main className={`${style.headerContainer}`}>
-        <Navbar />
         <Avatar />
         <Socialmedia />
       </main>

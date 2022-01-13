@@ -1,21 +1,28 @@
 import style from "styles/header.module.css";
 
 const Menu = () => {
+  let scroll = 0;
+
   const menuClicked = () => {
     const menu = document.getElementById("menu");
     const menuCtn = document.getElementById("menuCtn");
+    const body = document.body;
 
     menu.classList.toggle(`${style.menu}`);
     menuCtn.classList.toggle(`${style.reveal}`);
-    const body = document.body;
-    if (body.style.overflow === "hidden") {
+
+    if (body.style.position === "fixed") {
       body.style = "";
+      window.scroll(0, scroll);
     } else {
-      body.style.overflow = "hidden";
+      scroll = window.scrollY;
+      body.style.top = `-${scroll}px`;
+      body.style.height = `calc(100% + ${scroll}px)`;
+      body.style.position = "fixed";
     }
   };
   return (
-    <nav>
+    <>
       <div className={style.rotateContainer} onClick={menuClicked}>
         <svg
           id="menu"
@@ -44,7 +51,7 @@ const Menu = () => {
           <li>Contact</li>
         </ul>
       </section>
-    </nav>
+    </>
   );
 };
 
