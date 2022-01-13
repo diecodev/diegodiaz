@@ -78,10 +78,7 @@
 /* menu content */
 .menuContent {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
+  inset: 0px;
   z-index: 1;
   opacity: 0;
   pointer-events: none;
