@@ -7,9 +7,12 @@ const Menu = () => {
     menu.classList.toggle(`${style.menu}`);
     menuCtn.classList.toggle(`${style.reveal}`);
     const body = document.body;
-    body.style.overflow == "hidden"
-      ? (body.style = "")
-      : (body.style.overflow = "hidden");
+    if (body.style.overflow == "hidden") {
+      body.style = "";
+    } else {
+      body.style.overflow = "hidden";
+      body.style.position = "fixed";
+    }
   };
   return (
     <nav>
