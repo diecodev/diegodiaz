@@ -4,14 +4,15 @@ const Menu = () => {
   const menuClicked = () => {
     const menu = document.getElementById("menu");
     const menuCtn = document.getElementById("menuCtn");
+    const scroll = window.scrollY;
+
     menu.classList.toggle(`${style.menu}`);
     menuCtn.classList.toggle(`${style.reveal}`);
     const body = document.body;
-    if (body.style.overflow == "hidden") {
+    if (body.style.overflow === "hidden") {
       body.style = "";
     } else {
       body.style.overflow = "hidden";
-      body.style.position = "fixed";
     }
   };
   return (
