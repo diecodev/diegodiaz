@@ -4,7 +4,6 @@ const Menu = () => {
   const menuClicked = () => {
     const menu = document.getElementById("menu");
     const menuCtn = document.getElementById("menuCtn");
-    const scroll = window.scrollY;
 
     menu.classList.toggle(`${style.menu}`);
     menuCtn.classList.toggle(`${style.reveal}`);
