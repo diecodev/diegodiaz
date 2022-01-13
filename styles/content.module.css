@@ -5,11 +5,25 @@
 }
 
 .section > div > h3,
-.skillsCtn > ul > h3 {
+.skillsCtn > ul > h3,
+.projectsCtn > h3 {
   margin: 0 0 var(--margin_default);
   text-align: center;
   font-weight: 600;
   font-size: var(--font_medium);
+}
+
+.skillsCtn > ul,
+.projectsCtn > section > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skillsCtn,
+.projectsCtn {
+  display: grid;
+  place-items: center;
+  padding: 0 var(--margin_default);
 }
 /* ------- About ----------- */
 .section {
@@ -24,9 +38,6 @@
 
 /* -------- Skills ------ */
 .skillsCtn {
-  display: grid;
-  place-items: center;
-  padding: 0 var(--margin_default);
   background: linear-gradient(
     0deg,
     rgba(243, 243, 243, 1) 0%,
@@ -34,8 +45,6 @@
   );
 }
 .skillsCtn > ul {
-  list-style: none;
-  padding: 0;
   width: 90%;
 }
 
@@ -63,4 +72,94 @@
 
 .skill > p {
   margin-bottom: 0;
+}
+
+/* -------------- Projects ---------- */
+.projectsCtn {
+  background: linear-gradient(
+    180deg,
+    rgba(243, 243, 243, 1) 0%,
+    rgba(243, 243, 243, 0) 100%
+  );
+}
+
+.projectsCtn > h3 {
+  margin: calc(2 * var(--margin_default)) 0 var(--margin_default);
+}
+
+.projectsCtn > section {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.projectsCtn > section > ul {
+  display: flex;
+  overflow: hidden;
+  gap: var(--margin_default);
+}
+
+.projectsCtn > section > ul > label {
+  width: 100%;
+  flex: none;
+}
+
+.project:not(:last-child) {
+  margin-bottom: var(--margin_default);
+}
+
+.project > div {
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+.project > h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.project > p {
+  line-height: var(--margin_default);
+  text-align: justify;
+  margin-bottom: calc(1.5 * var(--margin_default));
+}
+
+.project > button,
+.projectsCtn > section > button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.project > button > a {
+  padding: calc(var(--margin_default) / 2) var(--margin_default);
+  background-color: var(--bg_primary);
+  color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* hideen radio buttons */
+.hidden {
+  display: none;
+}
+
+.first {
+  transition: all 300ms ease;
+}
+
+.hidden:nth-of-type(2):checked ~ ul > label.first {
+  margin-left: calc(-100% - var(--margin_default));
+}
+.hidden:nth-of-type(3):checked ~ ul > label.first {
+  margin-left: calc(-200% - 2 * var(--margin_default));
+}
+.hidden:nth-of-type(4):checked ~ ul > label.first {
+  margin-left: calc(-300% - 3 * var(--margin_default));
 }
