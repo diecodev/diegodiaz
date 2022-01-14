@@ -155,3 +155,72 @@
   align-self: center;
   justify-content: center;
 }
+
+@media screen and (min-width: 600px) {
+  .headerContainer {
+    justify-content: space-around;
+    padding: calc(1.2 * var(--margin_default)) 0;
+  }
+
+  .rotateContainer {
+    display: none;
+  }
+
+  .menuContent {
+    position: inherit;
+    display: flex;
+    width: inherit;
+    pointer-events: inherit;
+    opacity: 1;
+    width: auto;
+  }
+
+  .menuContent > ul {
+    margin: 0;
+    display: flex;
+    gap: calc(1.5 * var(--margin_default));
+    padding: 0;
+  }
+
+  .menuContent > ul > li {
+    width: auto;
+    transform: none;
+    margin: 0;
+  }
+
+  .avatarCtn {
+    flex-direction: row;
+    gap: var(--margin_default);
+  }
+
+  .avatar {
+    width: calc(8 * var(--margin_default));
+    height: calc(8 * var(--margin_default));
+  }
+
+  .avatarCtn > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+
+  .avatarInf {
+    margin: 0;
+    text-align: left;
+  }
+
+  .avatarInf > h3 {
+    font-size: var(--font_big);
+    line-height: calc(var(--margin_default) * 1.2);
+  }
+
+  .socialmedia {
+    align-self: inherit;
+    gap: calc(var(--margin_default) / 1.5);
+  }
+
+  .socialmedia > a > svg {
+    width: 25px;
+  }
+}

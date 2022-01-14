@@ -1,7 +1,6 @@
 import Navbar from "components/header/navbar/Navbar";
 import style from "styles/header.module.css";
 import Avatar from "components/Avatar/Avatar";
-import Socialmedia from "./Socialmedia/Socialmedia";
 
 const Header = () => {
   return (
@@ -9,7 +8,6 @@ const Header = () => {
       <Navbar />
       <main className={`${style.headerContainer}`}>
         <Avatar />
-        <Socialmedia />
       </main>
       <div className={style.waveCtn}>
         <svg
