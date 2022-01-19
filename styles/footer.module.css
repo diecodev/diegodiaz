@@ -64,3 +64,10 @@
   place-items: center;
   gap: 5px;
 }
+
+@media screen and (min-width: 1200px) {
+  .content > div {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}

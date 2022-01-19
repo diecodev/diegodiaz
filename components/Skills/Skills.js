@@ -3,8 +3,8 @@ import style from "styles/content.module.css";
 const Skills = () => {
   return (
     <section className={style.skillsCtn}>
+      <h3>Skills</h3>
       <ul>
-        <h3>Skills</h3>
         <li className={style.skill}>
           <h3>React</h3>
           <p>A JavaScipt library for building user interfaces.</p>

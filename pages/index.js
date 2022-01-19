@@ -15,9 +15,11 @@ export default function Home() {
       </Head>
       <div>
         <Header />
-        <About />
-        <Skills />
-        <Projects />
+        <div className="Ctn">
+          <About />
+          <Skills />
+          <Projects />
+        </div>
         <Footer />
       </div>
     </div>

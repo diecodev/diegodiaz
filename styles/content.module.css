@@ -1,11 +1,6 @@
 /* GLOBALS */
-.section > div,
-.skillsCtn > ul {
-  margin: calc(2 * var(--margin_default)) 0;
-}
-
 .section > div > h3,
-.skillsCtn > ul > h3,
+.skillsCtn > h3,
 .projectsCtn > h3 {
   margin: 0 0 var(--margin_default);
   text-align: center;
@@ -31,6 +26,10 @@
   margin: 0 var(--margin_default);
 }
 
+.section > div {
+  margin: calc(2 * var(--margin_default)) 0;
+}
+
 .section > div > p {
   text-align: justify;
   line-height: var(--margin_default);
@@ -43,9 +42,11 @@
     rgba(243, 243, 243, 1) 0%,
     rgba(243, 243, 243, 0) 100%
   );
+  margin: calc(2 * var(--margin_default)) 0 0;
 }
 .skillsCtn > ul {
   width: 90%;
+  margin: 0;
 }
 
 .skill {
@@ -115,18 +116,18 @@
   display: flex;
 }
 
-.project > h3 {
+.project > span > h3 {
   text-align: center;
   font-weight: bold;
 }
 
-.project > p {
+.project > span > p {
   line-height: var(--margin_default);
   text-align: justify;
   margin-bottom: calc(1.5 * var(--margin_default));
 }
 
-.project > button,
+.project > span > button,
 .projectsCtn > section > button {
   background-color: transparent;
   border: none;
@@ -135,7 +136,7 @@
   cursor: pointer;
 }
 
-.project > button > a {
+.project > span > button > a {
   padding: calc(var(--margin_default) / 2) var(--margin_default);
   background-color: var(--bg_primary);
   color: var(--white);
@@ -163,4 +164,82 @@
 }
 .hidden:nth-of-type(4):checked ~ ul > label.first {
   margin-left: calc(-300% - 3 * var(--margin_default));
+}
+
+@media screen and (min-width: 600px) {
+  /* -----GLOBALS ---------- */
+  .skillsCtn > ul::before,
+  .skill:nth-child(even)::after,
+  .skill:nth-child(odd)::after {
+    content: "";
+    position: absolute;
+    background-color: var(--bg_secondary);
+  }
+
+  .skill:nth-child(even)::after,
+  .skill:nth-child(odd)::after {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: -13px;
+    box-shadow: 0 4px 5px var(--black_shadow);
+  }
+
+  /* ----------skills--------- */
+
+  .skillsCtn > ul {
+    position: relative;
+  }
+
+  .skillsCtn > ul::before {
+    width: 2px;
+    height: 92%;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  .skill {
+    width: 50%;
+  }
+
+  .skill:not(:last-child) {
+    margin-bottom: calc(2 * var(--margin_default));
+  }
+
+  .skill:nth-child(even) {
+    float: left;
+    clear: right;
+    transform: translateX(-20px);
+  }
+
+  .skill:nth-child(even)::after {
+    right: calc(-13px - 20px);
+  }
+
+  .skill:nth-child(odd) {
+    float: right;
+    clear: left;
+    transform: translateX(20px);
+  }
+
+  .skill:nth-child(odd)::after {
+    left: calc(-13px - 20px);
+  }
+
+  .project {
+    display: flex;
+    gap: var(--margin_default);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project > div {
+    max-width: calc(50% - var(--margin_default));
+  }
+  @media screen and (min-width: 1200px) {
+    .skillsCtn,
+    .projectsCtn {
+      background: none;
+    }
+  }
 }

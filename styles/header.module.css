@@ -156,6 +156,8 @@
   justify-content: center;
 }
 
+/* ------------TABLET DESIGN ------------ */
+
 @media screen and (min-width: 600px) {
   .headerContainer {
     justify-content: space-around;
@@ -222,5 +224,11 @@
 
   .socialmedia > a > svg {
     width: 25px;
+  }
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 70%;
+      margin: 0 auto;
+    }
   }
 }

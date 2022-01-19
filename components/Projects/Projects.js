@@ -69,14 +69,16 @@ const Projects = () => {
                 <div>
                   <Image src={imgDir} placeholder="blur" />
                 </div>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <button>
-                  <a href={link} target="_blank" rel="noopener noreferrer">
-                    Demo
-                    <Icon icon="bi:arrow-left" height="22" rotate={2} />
-                  </a>
-                </button>
+                <span>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                  <button>
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                      Demo
+                      <Icon icon="bi:arrow-left" height="22" rotate={2} />
+                    </a>
+                  </button>
+                </span>
               </li>
             </label>
           ))}
