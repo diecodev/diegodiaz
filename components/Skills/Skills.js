@@ -2,7 +2,7 @@ import style from "styles/content.module.css";
 
 const Skills = () => {
   return (
-    <section className={style.skillsCtn}>
+    <section id="skills" className={style.skillsCtn}>
       <h3>Skills</h3>
       <ul>
         <li className={style.skill}>

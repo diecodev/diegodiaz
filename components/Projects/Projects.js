@@ -20,7 +20,7 @@ const Projects = () => {
   };
 
   return (
-    <div className={style.projectsCtn}>
+    <div id="projects" className={style.projectsCtn}>
       <h3>Projects</h3>
       <section>
         <button onClick={handleClick}>

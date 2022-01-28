@@ -67,6 +67,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   font-family: "Poppins", sans-serif;
   color: var(--black);
+  scroll-behavior: smooth;
 }
 
 /* Sections

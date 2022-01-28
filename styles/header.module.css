@@ -84,7 +84,6 @@
 
 .menuContent > ul {
   list-style-type: none;
-  color: var(--white);
   font-size: var(--font_title);
   line-height: var(--font_normal);
   padding-right: calc(1rem + var(--margin_default));
@@ -99,6 +98,10 @@
   font-weight: 600;
   transform: translateX(100%);
   transition: transform 500ms ease-in;
+}
+
+.menuContent >ul>li>a{
+  color: var(--white);
 }
 
 .reveal {

@@ -1,8 +1,6 @@
 import style from "styles/header.module.css";
 
 const Menu = () => {
-  let scroll = 0;
-
   const menuClicked = () => {
     const menu = document.getElementById("menu");
     const menuCtn = document.getElementById("menuCtn");
@@ -11,15 +9,6 @@ const Menu = () => {
     menu.classList.toggle(`${style.menu}`);
     menuCtn.classList.toggle(`${style.reveal}`);
 
-    if (body.style.position === "fixed") {
-      body.style = "";
-      window.scroll(0, scroll);
-    } else {
-      scroll = window.scrollY;
-      body.style.top = `-${scroll}px`;
-      body.style.height = `calc(100% + ${scroll}px)`;
-      body.style.position = "fixed";
-    }
   };
   return (
     <>
@@ -44,11 +33,11 @@ const Menu = () => {
       </div>
       <section id="menuCtn" className={style.menuContent}>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li><a onClick={menuClicked} href="#home">Home</a></li>
+          <li><a onClick={menuClicked} href="#about">About</a></li>
+          <li><a onClick={menuClicked} href="#skills">Skills</a></li>
+          <li><a onClick={menuClicked} href="#projects">Projects</a></li>
+          <li><a onClick={menuClicked} href="#contact">Contact</a></li>
         </ul>
       </section>
     </>

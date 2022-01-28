@@ -3,7 +3,7 @@ import style from "styles/footer.module.css";
 
 const Footer = () => {
   return (
-    <footer className={style.footer}>
+    <footer id="contact" className={style.footer}>
       <div className={style.waveCtn}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

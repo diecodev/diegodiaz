@@ -2,7 +2,7 @@ import style from "styles/content.module.css";
 
 const About = () => {
   return (
-    <section className={style.section}>
+    <section id="about" className={style.section}>
       <div>
         <h3>About</h3>
         <p>

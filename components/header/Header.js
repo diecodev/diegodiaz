@@ -4,7 +4,7 @@ import Avatar from "components/Avatar/Avatar";
 
 const Header = () => {
   return (
-    <>
+    <div id="home">
       <Navbar />
       <main className={`${style.headerContainer}`}>
         <Avatar />
@@ -24,7 +24,7 @@ const Header = () => {
           />
         </svg>
       </div>
-    </>
+    </div>
   );
 };
 
