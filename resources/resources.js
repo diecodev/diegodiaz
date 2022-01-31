@@ -29,6 +29,6 @@ export const resources = [
     title: "EstuArg.com",
     description:
       "This is the web page of a travel consulting agency for studying in Argentina.",
-    link: "https://yelenka.vercel.app",
+    link: "https://estuarg.vercel.app",
   },
 ];
