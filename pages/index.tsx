@@ -1,11 +1,22 @@
-import { NextPage } from "next";
+import PublicLayout from 'components/Home/PublicLayout';
+import { ReactNode } from 'react';
 
-const Home : NextPage = () => {
+const Home = () => {
   return (
     <div>
-      <h1>Hola Mundo</h1>
+      <h1 className='text-white'>Hola Mundo</h1>
     </div>
   );
-}
+};
 
-export default Home
+Home.getLayout = function getLayout (page: ReactNode) {
+  return (
+    <>
+      <PublicLayout>
+        {page}
+      </PublicLayout>
+    </>
+  );
+};
+
+export default Home;
