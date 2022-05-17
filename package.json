@@ -1,5 +1,5 @@
 {
-  "name": "Diego Diaz Portfolio",
+  "name": "Portfolio",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,7 +14,9 @@
   },
   "devDependencies": {
     "@iconify/react": "^3.1.2",
+    "@types/react": "18.0.1",
     "eslint": "8.6.0",
-    "eslint-config-next": "12.0.7"
+    "eslint-config-next": "12.0.7",
+    "typescript": "^4.6.4"
   }
 }
